@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\Editor\AcAddTransformEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Editor\Custom\AddTriggerWindow.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcSetActiveCutSceneEditor.cs" />
     <Compile Include="Assets\Scripts\Effect\SO\Editor\SOEffectObjectWindow.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\Editor\UnitAnimEditWindow.cs" />
     <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcDebugUnitMoveEditor.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineSetLensEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerActionEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\DOTween\Editor\AcDoScaleEditor.cs" />
+    <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCinePriorityEditor.cs" />
     <Compile Include="Assets\Scripts\DIalog\SO\Editor\SODialogDataEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\Editor\AcInstantiateEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerEventWindow.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\Editor\AcSetActiveEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineDampingEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineCameraSetFollowEditor.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcDialogWindow.cs" />
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerControllerEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcDialogEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\Editor\AcAddforceEditor.cs" />
@@ -93,7 +96,7 @@
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerUtility.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineSetSoftZoneEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\EditorWaitForSeconds.cs" />
-    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcDialogWindow.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcSoundEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

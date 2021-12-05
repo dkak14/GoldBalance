@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using Triggers;
+using System;
 using System.Text.RegularExpressions;
 namespace Triggers {
     public class AddTriggerWindow : EditorWindow {
@@ -10,17 +11,20 @@ namespace Triggers {
         static List<TriggerAction> m_Triggers;
         static string searchText;
         static string beforeSearchText;
+        static Action<TriggerAction> addCallback;
+
         List<TriggerDirectory> m_TriggerDirectorys;
         bool start = false;
 
         Vector2 vec2 = Vector2.zero;
         List<DisplayTriggerAction> displayTriggers = new List<DisplayTriggerAction>();
-        public static void Open(List<TriggerAction> triggerList) {
+        public static void Open(List<TriggerAction> triggerList, Action<TriggerAction> addCallback) {
             searchText = "";
             beforeSearchText = "";
             if (m_AddTriggerWindow == null) {
                 m_AddTriggerWindow = CreateInstance<AddTriggerWindow>();
             }
+            AddTriggerWindow.addCallback = addCallback;
             m_Triggers = triggerList;
             m_AddTriggerWindow.Show();
         }
@@ -89,6 +93,9 @@ namespace Triggers {
                         TriggerAction trigger = displayTriggerList[index].GetCopyTrigger();
                         trigger.name = "Ac" + trigger.TriggerName;
                         m_Triggers.Add(trigger);
+                        if(addCallback != null) {
+                            addCallback(trigger);
+                        }
                     }
                 }
             }

@@ -42,6 +42,7 @@ public class PlayerInputController : MonoBehaviour, IInitialization
         myInputActionDIc.Add("Q", new MyInputAction(playerInput.KeyBoard.Q));
         myInputActionDIc.Add("F", new MyInputAction(playerInput.KeyBoard.F));
         myInputActionDIc.Add("S", new MyInputAction(playerInput.KeyBoard.S));
+        myInputActionDIc.Add("W", new MyInputAction(playerInput.KeyBoard.W));
         myInputActionDIc.Add("1", new MyInputAction(playerInput.KeyBoard._1));
         myInputActionDIc.Add("2", new MyInputAction(playerInput.KeyBoard._2));
 

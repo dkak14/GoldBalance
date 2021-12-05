@@ -144,7 +144,19 @@ namespace Triggers {
         //    };
 
         //}
+
+        // 잘 안됨
+        void TriggerEnable(TriggerAction trigger) {
+            var triggerEditor = (TriggerActionEditor)Editor.CreateEditor(trigger);
+            SerializedObject triggerSO = new SerializedObject(trigger);
+            triggerEditor.OnTriggerEnable(triggerSO);
+            triggerSO.ApplyModifiedProperties();
+        }
         void ActionReorderableSetting() {
+            for (int i = 0; i < m_TriggerController.Sequence.Count; i++) {
+                TriggerEnable(m_TriggerController.GetTrigger(i));
+            }
+
             SequenceProperty = serializedObject.FindProperty("Sequence");
             ActionReorderable = new ReorderableList(serializedObject, SequenceProperty, true, true, false, false);
 
@@ -228,6 +240,7 @@ namespace Triggers {
                 Init();
                 needInit = false;
             }
+
             if(Event.current.control && Event.current.keyCode == KeyCode.C && Event.current.type == EventType.KeyUp) {
                 copyTriggerAction = new List<TriggerAction>();
                 for(int i = 0; i < selectActionList.Count; i++) {
@@ -281,7 +294,7 @@ namespace Triggers {
                 // 트리거 추가, 삭제
                 GUI.color = new Color(1, 1, 1, 1);
                 if (GUILayout.Button("AddTrigger")) {
-                    AddTriggerWindow.Open(m_TriggerController.Sequence);
+                    AddTriggerWindow.Open(m_TriggerController.Sequence, TriggerEnable);
                 }
                 if (GUILayout.Button("Remove")) {
                     DeleteAction();

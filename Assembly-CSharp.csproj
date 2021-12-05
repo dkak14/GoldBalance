@@ -54,10 +54,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Screen\ScreenEffect.cs" />
+    <Compile Include="Assets\Scripts\Trigger\TriggerCollision.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\AcCineSetLens.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcSpawnEffect.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcAddTransform.cs" />
+    <Compile Include="Assets\Scripts\Unit\Enemy\SpiderWeb.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\PlayerPickUpController.cs" />
     <Compile Include="Assets\Scripts\Unit\SO\SOUnitData.cs" />
@@ -72,8 +74,10 @@
     <Compile Include="Assets\Scripts\Unit\Player\PlayerWeaponController.cs" />
     <Compile Include="Assets\Scripts\UI\EquipWeaponUI.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Scripts\MyPlatform.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcSetActive.cs" />
     <Compile Include="Assets\Scripts\MyGizmos.cs" />
+    <Compile Include="Assets\Scripts\UI\Wanted.cs" />
     <Compile Include="Assets\Scripts\Trigger\TriggerActionInvoker.cs" />
     <Compile Include="Assets\Scripts\UI\DialogBox.cs" />
     <Compile Include="Assets\Scripts\Manager\SceneLoader.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="Assets\Scripts\Manager\StageManager.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\AcCineCameraSetFollow.cs" />
     <Compile Include="Assets\Scripts\Effect\EffectObject.cs" />
+    <Compile Include="Assets\Scripts\Trigger\Cinemachine\AcCinePriority.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\Weapon\Bat.cs" />
     <Compile Include="Assets\Scripts\UI\SoundSlider.cs" />
     <Compile Include="Assets\Scripts\UI\StagePage.cs" />
@@ -101,6 +106,7 @@
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcDebugErrorText.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\PlayerMoveController.cs" />
     <Compile Include="Assets\Scripts\Sound\SOSoundData.cs" />
+    <Compile Include="Assets\Scripts\WeaponSpawner.cs" />
     <Compile Include="Assets\Scripts\BackGround.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Scripts\Unit\UnitMoveControllerBase.cs" />
@@ -115,15 +121,20 @@
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcDebugText.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcSetAnimatorParam.cs" />
     <Compile Include="Assets\Scripts\EnumFlagsAttribute.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcSetActiveCutScene.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcDebugWarningText.cs" />
+    <Compile Include="Assets\Scripts\Unit\Enemy\ZombieController.cs" />
     <Compile Include="Assets\Scripts\Trigger\TriggerController.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\Weapon\Sword.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcInstantiate.cs" />
+    <Compile Include="Assets\Scripts\Unit\Enemy\BossController.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcMoveTransform.cs" />
     <Compile Include="Assets\Scripts\Manager\UnitManager.cs" />
+    <Compile Include="Assets\Scripts\Unit\Enemy\SpiderController.cs" />
     <Compile Include="Assets\Scripts\Screen\LetterBox.cs" />
     <Compile Include="Assets\Scripts\UI\StageButton.cs" />
+    <Compile Include="Assets\Scripts\Unit\Player\PlayerInteractionController.cs" />
     <Compile Include="Assets\Scripts\Screen\NormalFade.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\PlayerAnimController.cs" />
     <Compile Include="Assets\Scripts\Trigger\TriggerProperty.cs" />
@@ -141,8 +152,7 @@
     <Compile Include="Assets\Scripts\Unit\UnitControllerBase.cs" />
     <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcDebugUnitMove.cs" />
     <Compile Include="Assets\Scripts\Manager\EffectManager.cs" />
-    <Compile Include="Assets\Scripts\Trigger\TriggerCollision.cs" />
-    <Compile Include="Assets\Scripts\MyPlatform.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcSound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

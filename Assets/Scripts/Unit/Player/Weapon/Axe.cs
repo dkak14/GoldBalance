@@ -7,7 +7,7 @@ public class Axe : Weapon
     Coroutine attackDelayRoutine;
     [SerializeField] Vector2 offset;
     [SerializeField] Vector2 attackSize;
-
+    Vector2 attackOffset { get { return spriteRenderer.flipY ? new Vector2(-offset.x, offset.y) : offset; } }
     bool attack = false;
     public override void NotSelectPickUp(PlayerPickUpController pickUpController) {
         base.NotSelectPickUp(pickUpController);
@@ -38,11 +38,13 @@ public class Axe : Weapon
         if(spriteData.clipName == "PlayerAxe_Attack" && spriteData.index >= 4) {
             if (!attack) {
                 attack = true;
-                Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)unitController.transform.position + offset, attackSize, 0, 1 << LayerMask.NameToLayer("Enemy"));
+                Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)unitController.transform.position + attackOffset, attackSize, 0, 1 << LayerMask.NameToLayer("Enemy"));
                 for (int i = 0; i < hits.Length; i++) {
                     UnitControllerBase unit;
                     if (hits[i].TryGetComponent(out unit)) {
-                        unit.Damaged(weaponData.damage);
+                        int forceDir = unitController.FlipX ? -1 : 1;
+                        unit.AddForce(Vector2.right * forceDir);
+                        Damage(unit);
                     }
                     Debug.Log("РћСп");
                 }
@@ -93,7 +95,6 @@ public class Axe : Weapon
     }
     private void OnDrawGizmos() {
         if (unitController) {
-            Vector2 attackOffset = spriteRenderer.flipY ? new Vector2(-offset.x, offset.y) : offset;
             Gizmos.DrawWireCube((Vector2)unitController.transform.position + attackOffset, attackSize);
         }
     }

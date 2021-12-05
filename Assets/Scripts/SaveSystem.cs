@@ -40,6 +40,7 @@ namespace GameSave {
                     return saveData;
                 }
             }
+            Resources.Load<Sprite>("Path");
             return null;
         }
     }

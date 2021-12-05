@@ -69,6 +69,9 @@ public class PickUpObject : MonoBehaviour, IInitialization
         unitAnimController = null;
         unitMoveController = null;
         unitAnimator = null;
+
+        spriteRenderer.flipX = false;
+        spriteRenderer.flipY = false;
     }
     public void AimUpdate(Vector2 centerOffset, Vector2 dir, float dst, PlayerAnimClipSpriteData spriteData) {
         this.centerOffset = centerOffset;

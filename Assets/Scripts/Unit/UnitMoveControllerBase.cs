@@ -33,17 +33,20 @@ public class UnitMoveControllerBase : MonoBehaviour, IInitialization
     }
     public void DownPlatform() {
         if (unitController.onPlatform) {
-            Collider2D effector;
+            PlatformEffector2D effector;
             if(unitController.onPlatformHitCollider.transform.TryGetComponent(out effector)) {
                 StartCoroutine(C_FallTimer(effector));
             }
         }
     }
-    IEnumerator C_FallTimer(Collider2D effector) {
-        Physics2D.IgnoreCollision(collider2d, effector);
-        rigidbody2d.AddForce(Vector2.down, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(0.5f);
-        Physics2D.IgnoreCollision(collider2d, effector, false);
+    IEnumerator C_FallTimer(PlatformEffector2D effector) {
+        Collider2D collider;
+        if (effector.TryGetComponent(out collider)) {
+            Physics2D.IgnoreCollision(collider2d, collider);
+            rigidbody2d.AddForce(Vector2.down, ForceMode2D.Impulse);
+            yield return new WaitForSeconds(0.5f);
+            Physics2D.IgnoreCollision(collider2d, collider, false);
+        }
     }
     protected virtual void MoveAction(float axis, float speed, float maxSpeed) {
         float xVelocity = rigidbody2d.velocity.x;

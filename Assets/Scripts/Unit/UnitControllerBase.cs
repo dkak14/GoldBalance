@@ -19,6 +19,7 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
     protected SpriteRenderer spriteRenderer;
     protected PlayerInputController playerInputController;
     protected Collider2D collider2d;
+    protected Rigidbody2D rigidbody2d;
     [SerializeField, EnumFlags] UnitAnimState state;
     public bool onPlatform;
 
@@ -29,13 +30,16 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
     public int unitFieldID;
 
     public bool FlipX { get { return spriteRenderer.flipX; } set { spriteRenderer.flipX = value; } }
-
     public Action DieEvent = delegate { };
     protected virtual void Awake() {
         Initialization();
         EventManager.Instance.SpawnUnit(this);
+        EventManager.Instance.SetActiveCutScene += SetActiveCutScene;
     }
     protected virtual void Start() {
+    }
+    protected virtual void OnDestroy() {
+        EventManager.Instance.SetActiveCutScene -= SetActiveCutScene;
     }
     public bool IsActiveState(UnitAnimState flag) {
         if ((state & flag) == flag) {
@@ -75,17 +79,22 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
             yield return fixedUpdate;
         }
     }
-    public void Damaged(int damage) {
+    public bool Damaged(int damage, UnitControllerBase attacker ,WeaponType type) {
         if (!IsActiveState(UnitAnimState.Cinematic)) {
-            damaged(damage);
+            damaged(damage,attacker, type);
             if (hp <= 0) {
                 DieEvent();
                 Die();
+                return true;
             }
         }
+        return false;
     }
-    protected virtual void damaged(int damage) {
-        hp -= damage;
+    protected virtual void damaged(int damage, UnitControllerBase attacker, WeaponType type) {
+        HP -= damage;
+    }
+    public void AddForce(Vector2 dir) {
+        rigidbody2d.AddForce(dir, ForceMode2D.Impulse);
     }
     public virtual void Die() {
         EventManager.Instance.DieUnit(this, unitFieldID);
@@ -96,6 +105,7 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
         Destroy(gameObject);
     }
     public virtual void Initialization() {
+        TryGetComponent(out rigidbody2d);
         TryGetComponent(out spriteRenderer);
         TryGetComponent(out collider2d);
         TryGetComponent(out playerInputController);
@@ -103,7 +113,14 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
             StartCoroutine(C_CheckPlatform());
         hp = maxHp;
     }
-
+    void SetActiveCutScene(bool isActive) {
+        if (isActive) {
+            SetActiveState(UnitAnimState.Cinematic, true);
+        }
+        else{
+            SetActiveState(UnitAnimState.Cinematic, false);
+        }
+    }
     void OnDrawGizmos() {
         if (collider2d != null) {
             Vector2 boxSize = new Vector2(collider2d.bounds.size.x * 0.9f, 0.1f);

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: WeaponData
   m_EditorClassIdentifier: 
   weaponData:
-  - weapon: {fileID: 7449741914612158028, guid: c8679735b016256468fb4ca10a182f84, type: 3}
+  - weapon: {fileID: -4489622824456548521, guid: c8679735b016256468fb4ca10a182f84, type: 3}
     name: "\uBC1C\uD130PPK"
     ID: 11011
     damage: 50
-    reloading: 0.5
+    reloading: 1
     attackSpeed: 0.5
     bullet: 5
     type: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
     name: M16A1
     ID: 11021
     damage: 100
-    reloading: 0.5
+    reloading: 1
     attackSpeed: 0.2
     bullet: 30
     type: 2
@@ -34,7 +34,7 @@ MonoBehaviour:
     ID: 11032
     damage: 80
     reloading: 0
-    attackSpeed: 0.3
+    attackSpeed: 1
     bullet: 0
     type: 3
   - weapon: {fileID: 4845985209804786874, guid: ef437c960b888784ebd56cab3de370f7, type: 3}
@@ -50,11 +50,19 @@ MonoBehaviour:
     ID: 11052
     damage: 100
     reloading: 0
-    attackSpeed: 0.3
+    attackSpeed: 1
     bullet: 0
     type: 3
+  - weapon: {fileID: 8658528342178270698, guid: 302e5aa330b1ffb48b46e8e267135a1f, type: 3}
+    name: beretta92
+    ID: 11061
+    damage: 70
+    reloading: 1
+    attackSpeed: 0.5
+    bullet: 7
+    type: 1
   weaponObject:
-  - weapon: {fileID: 7449741914612158028, guid: c8679735b016256468fb4ca10a182f84, type: 3}
+  - weapon: {fileID: -4489622824456548521, guid: c8679735b016256468fb4ca10a182f84, type: 3}
     ID: 11011
   - weapon: {fileID: 5070315549362411128, guid: fc2a4437cf34c58418aac92a81983d3c, type: 3}
     ID: 11021
@@ -64,3 +72,5 @@ MonoBehaviour:
     ID: 11042
   - weapon: {fileID: 8407124658048012772, guid: 13eae48394b5417448487b9a3d06678f, type: 3}
     ID: 11052
+  - weapon: {fileID: 8658528342178270698, guid: 302e5aa330b1ffb48b46e8e267135a1f, type: 3}
+    ID: 11061

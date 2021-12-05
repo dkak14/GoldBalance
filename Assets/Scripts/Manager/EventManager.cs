@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 public class EventManager : Singleton<EventManager>
 {
+    public Action<bool> SetActiveCutScene = delegate { };
     public Action<int, PickUpObject> GetWeapon = delegate { };
     public Action<int, PickUpObject> ThrowWeapon = delegate { };
     public Action<int, PickUpObject> SelectWeapon = delegate { };

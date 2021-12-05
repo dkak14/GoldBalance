@@ -10,7 +10,7 @@ public class PlayerMoveController : UnitMoveControllerBase {
     bool move;
     private void Update() {
         if (Time.timeScale != 0) {
-            if (move && isMove) {
+            if (Mathf.Abs(rigidbody2d.velocity.x) > 0.1f) {
                 animator.SetBool("isMove", true);
             }
             else {
@@ -19,12 +19,14 @@ public class PlayerMoveController : UnitMoveControllerBase {
         }
     }
     private void StartedInputMove(InputAction.CallbackContext context) {
-        if(moveRoutine != null) {
-            StopCoroutine(moveRoutine);
-            moveRoutine = null;
+        if (!playerController.IsActiveState(UnitAnimState.Cinematic)) {
+            if (moveRoutine != null) {
+                StopCoroutine(moveRoutine);
+                moveRoutine = null;
+            }
+            moveRoutine = StartCoroutine(C_InputMove(context.ReadValue<float>()));
+            move = true;
         }
-        moveRoutine = StartCoroutine(C_InputMove(context.ReadValue<float>()));
-        move = true;
     }
     private void PerformedInputMove(InputAction.CallbackContext context) {
     }
@@ -62,6 +64,7 @@ public class PlayerMoveController : UnitMoveControllerBase {
         inputController.GetInputAction("Horizental").inputAction.performed -= PerformedInputMove;
         inputController.GetInputAction("Horizental").inputAction.canceled -= CanceledInputMove;
         inputController.GetInputAction("Space").inputAction.started -= JumpInput;
+        inputController.GetInputAction("W").inputAction.started -= JumpInput;
         inputController.GetInputAction("S").inputAction.started -= FallPlatform;
     }
     public override void Initialization() {
@@ -73,6 +76,7 @@ public class PlayerMoveController : UnitMoveControllerBase {
         inputController.GetInputAction("Horizental").inputAction.performed += PerformedInputMove;
         inputController.GetInputAction("Horizental").inputAction.canceled += CanceledInputMove;
         inputController.GetInputAction("Space").inputAction.started += JumpInput;
+        inputController.GetInputAction("W").inputAction.started += JumpInput;
         inputController.GetInputAction("S").inputAction.started += FallPlatform;
 
         playerController.OnPlatform += JumpAnim;

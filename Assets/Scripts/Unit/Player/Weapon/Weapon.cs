@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Cinemachine;
 public class Weapon : PickUpObject
 {
     [SerializeField]protected float attackCul;
@@ -33,6 +33,24 @@ public class Weapon : PickUpObject
             yield return null;
         }
         attackCul = 0;
+    }
+    public void Damage(UnitControllerBase damagedUnit) {
+        if(damagedUnit.Damaged(weaponData.damage, unitController, weaponData.type)) {
+            Camera mainCamera = Camera.main;
+            CinemachineBrain brain = mainCamera.GetComponent<CinemachineBrain>();
+            CinemachineVirtualCamera CVC = brain.ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
+            CinemachineBasicMultiChannelPerlin noise = CVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            StartCoroutine(C_Shake(noise));
+        }
+    }
+    IEnumerator C_Shake(CinemachineBasicMultiChannelPerlin noise) {
+        noise.m_AmplitudeGain = 5;
+        noise.m_FrequencyGain = 5;
+        Time.timeScale = 0.2f;
+        yield return new WaitForSecondsRealtime(0.5f);
+        Time.timeScale = 1f;
+        noise.m_AmplitudeGain = 0;
+        noise.m_FrequencyGain = 0;
     }
 }
 [System.Serializable]

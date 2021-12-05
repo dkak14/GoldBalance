@@ -2,19 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text;
-
+using DG.Tweening;
 public class Gun : Weapon
 {
-    [SerializeField] Bullet bullet;
-    [SerializeField] int bulletSpeed;
     [SerializeField] Vector2 bulletOffSet;
+    [SerializeField] float bulletShaking;
+    [SerializeField, Header("ÃÑ¾Ë »ö±ò")] Color bulletColor;
+    LineRenderer lineRenderer;
     int lastBullet;
-    [SerializeField] float reloadCul;
     float lastReload;
     bool reloading = false;
     float cul;
 
+    int layerMask;
+
     EquipWeaponUI displayUI;
+    protected override void Awake() {
+        base.Awake();
+        TryGetComponent(out lineRenderer);
+    }
     protected override void Aim(Vector2 centerOffset, Vector2 dir, float dst, PlayerAnimClipSpriteData spriteData) {
         base.Aim(centerOffset, dir, dst, spriteData);
         if (dir.x < 0) {
@@ -41,12 +47,35 @@ public class Gun : Weapon
     protected override void Attack(Vector2 dir) {
         lastBullet--;
         Vector2 offSet = spriteRenderer.flipY ? new Vector2(-bulletOffSet.x, bulletOffSet.y) : bulletOffSet;
-        Bullet spawnBullet = Instantiate(bullet, (Vector2)transform.position + offSet, Quaternion.identity);
-        Vector2 bulletDir = spriteRenderer.flipY ? -Vector2.right : Vector2.right;
-        spawnBullet.BulletSetting(weaponData.damage, bulletSpeed, bulletDir);
+        float angle = Random.Range(-bulletShaking, bulletShaking);
+        float bulletdirAngle = spriteRenderer.flipY ? 180 : 0;
+        bulletdirAngle += angle;
+        bulletdirAngle *= Mathf.Deg2Rad;
+        Vector2 bulletDir = new Vector2(Mathf.Cos(bulletdirAngle), Mathf.Sin(bulletdirAngle));
+        RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + offSet,bulletDir * 10, 10, layerMask);
+        if (hit) {
+            lineRenderer.SetPosition(0, (Vector2)transform.position + offSet);
+            lineRenderer.SetPosition(1, hit.point);
+            UnitControllerBase enemy;
+            if(hit.transform.TryGetComponent(out enemy)) {
+                Damage(enemy);
+            }
+        }
+        else {
+            lineRenderer.SetPosition(0, (Vector2)transform.position + offSet);
+            lineRenderer.SetPosition(1, (Vector2)transform.position + offSet + bulletDir * 10);
+        }
+        lineRenderer.DOKill();
+        lineRenderer.startColor = bulletColor;
+        lineRenderer.endColor = bulletColor;
+        Color lineStartColor = bulletColor;
+        Color lineEndColor = bulletColor;
+        Color2 startColor = new Color2(lineStartColor, lineEndColor);
+        Color2 endColor = new Color2(new Color(lineStartColor.r, lineStartColor.g, lineStartColor.b, 0), new Color(lineEndColor.r, lineEndColor.g, lineEndColor.b, 0));
+        lineRenderer.DOColor(startColor, endColor, 0.1f);
         DisplayUI(displayUI);
         if (lastBullet <= 0) {
-            lastReload = reloadCul;
+            lastReload = weaponData.reloading;
             Debug.Log("ÀçÀåÀü Áß " +lastReload);
             reloading = true;
         }
@@ -57,21 +86,23 @@ public class Gun : Weapon
     public override void PickUp(PlayerPickUpController pickUpController, Vector2 centerOffset, Vector2 dir, float dst, PlayerAnimClipSpriteData spriteData) {
         base.PickUp(pickUpController, centerOffset, dir, dst, spriteData);
         if (reloading) {
-            lastReload = reloadCul;
+            lastReload = weaponData.reloading;
         }
     }
     public override void NotSelectPickUp(PlayerPickUpController pickUpController) {
         base.NotSelectPickUp(pickUpController);
         if (reloading) {
-            lastReload = reloadCul;
+            lastReload = weaponData.reloading;
         }
     }
     public override void Initialization() {
         base.Initialization();
         lastBullet = weaponData.bullet;
+        layerMask = (1 << LayerMask.NameToLayer("Enemy")) + (1 << LayerMask.NameToLayer("Platform"));
     }
     public override void DisplayUI(EquipWeaponUI ui) {
         displayUI = ui;
+        ui.underBox.gameObject.SetActive(true);
         StringBuilder builder = new StringBuilder();
         builder.Append(lastBullet);
         builder.Append("/");
@@ -81,11 +112,10 @@ public class Gun : Weapon
     private void OnDrawGizmos() {
         if (spriteRenderer) {
             Vector2 offSet = spriteRenderer.flipY ? new Vector2(-bulletOffSet.x, bulletOffSet.y) : bulletOffSet;
-            Debug.Log(offSet);
-            MyGizmos.DrawWireCicle((Vector2)transform.position + offSet, 0.1f, 30);
+            MyGizmos.DrawWireCicle((Vector2)transform.position + offSet, 0.03f, 30);
         }
         else {
-            MyGizmos.DrawWireCicle((Vector2)transform.position + bulletOffSet, 0.1f, 30);
+            MyGizmos.DrawWireCicle((Vector2)transform.position + bulletOffSet, 0.03f, 30);
         }
     }
 }

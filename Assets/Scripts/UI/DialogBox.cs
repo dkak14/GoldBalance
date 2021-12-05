@@ -10,7 +10,6 @@ public class DialogBox : MonoBehaviour {
     [SerializeField] Image portrait;
     public Sprite portraitSprite { set { portrait.sprite = value; } }
     [SerializeField] TextMeshProUGUI textTMP;
-    [SerializeField] TextMeshProUGUI nameTMP;
     WaitForSeconds waitForSecond;
     float typingSpeed;
 
@@ -24,7 +23,6 @@ public class DialogBox : MonoBehaviour {
 
     public void StartDialog(DialogData dialogData, Sprite sprite) {
         this.dialogData = dialogData;
-        nameTMP.text = name;
         portrait.sprite = sprite;
         gameObject.SetActive(true);
         dialogRoutine = StartCoroutine(C_TextUpdate(dialogData, 0.05f));

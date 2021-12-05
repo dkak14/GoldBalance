@@ -24,7 +24,7 @@ public partial class TalkManager : SingletonBehaviour<TalkManager> {
         base.Awake();
         commandDic.Add("Debug", new DebugCommand(dialogBoxObject));
         commandDic.Add("typingSpeed", new TypingCommand(dialogBoxObject));
-        commandDic.Add("shakeCamera", new ShakeCamera(cvc, dialogBoxObject));
+        commandDic.Add("shakeCamera", new ShakeCamera(dialogBoxObject));
 
         defaultCommandDic.Add("i", "i");
         defaultCommandDic.Add("B", "i");
@@ -147,10 +147,13 @@ public class TypingCommand : TalkCommand {
     }
 }
 public class ShakeCamera : TalkCommand {
-    CinemachineVirtualCamera CVC;
-    public ShakeCamera(CinemachineVirtualCamera cvc, DialogBox box) : base(box) { CVC = cvc; }
+
+    public ShakeCamera(DialogBox box) : base(box) {  }
     public override void Execute(string[] param) {
         float power, duration;
+        Camera mainCamera = Camera.main;
+        CinemachineBrain brain = mainCamera.GetComponent<CinemachineBrain>();
+        CinemachineVirtualCamera CVC = brain.ActiveVirtualCamera.VirtualCameraGameObject.GetComponent<CinemachineVirtualCamera>();
         CinemachineBasicMultiChannelPerlin noise = CVC.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         if (float.TryParse(param[0], out power)) {
             noise.m_AmplitudeGain = power;

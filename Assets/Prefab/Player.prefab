@@ -1,0 +1,994 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3594533136241919777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3594533136241919782}
+  - component: {fileID: 3594533136241919783}
+  - component: {fileID: 3594533136241919776}
+  - component: {fileID: 3594533136241919787}
+  - component: {fileID: 3594533136241919780}
+  - component: {fileID: 3594533136241919781}
+  - component: {fileID: 3594533136241919786}
+  - component: {fileID: 3594533136241919785}
+  - component: {fileID: 3594533136241919784}
+  - component: {fileID: 3594533136241919791}
+  - component: {fileID: 3594533136241919790}
+  - component: {fileID: 2460522995409344328}
+  m_Layer: 7
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3594533136241919782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.494, y: 1.27, z: -0.16451256}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3594533136241919783
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1975468026882094814, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.15625, y: 0.90625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &3594533136241919776
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.35, y: 0.5}
+    oldSize: {x: 0.234375, y: 0.828125}
+    newSize: {x: 0.15625, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.28, y: 0.85}
+  m_EdgeRadius: 0
+--- !u!114 &3594533136241919787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaeabe4d6b280743a40e5f8e172d647, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 5
+  hp: 0
+  speed: 2
+  state: 0
+  onPlatform: 0
+  onPlatformHitCollider: {fileID: 0}
+  unitDataID: Player
+  unitFieldID: 0
+--- !u!114 &3594533136241919780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e381a6b042519645a2829f35141a72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3594533136241919781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6313201c14711094a981617384cde3bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpPower: 5.5
+  isMove: 1
+  isJump: 1
+--- !u!50 &3594533136241919786
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &3594533136241919785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28cdfd7d9a502f9459e0fdd49127f0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpRange: 2
+  playerWeapon:
+    selectWeapon: {fileID: 0}
+    objectList: []
+  handDst: 0.1
+  handOffset: {x: 0, y: 0}
+--- !u!95 &3594533136241919784
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be89878a6fda72c41a6cd57721f8a983, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3594533136241919791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7d0f821130cbc4484540055cc76e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleWeapon: {fileID: 0}
+  animControllerDatas:
+  - controller: {fileID: 9100000, guid: f155395bd0d4f194480deea7ba3c8857, type: 2}
+    type: 0
+    animDatas:
+    - clipName: Player_Idle
+      clipDatas:
+      - sprite: {fileID: -3755654357162195328, guid: e8fa3b9c5f959264a9aa3e82a72ebf5e, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+    - clipName: Player_Walk
+      clipDatas:
+      - sprite: {fileID: 6271674672454095231, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -5472852325172983002, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 6740012380587470751, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 2027882306579495052, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -4198330706962942397, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -7328556770771104369, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 1120088206422936072, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -8072317575308007845, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 140850891838506841, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 6097569838585248246, guid: f4f23a6d2c9ffd04ca2526d3d7e9a033, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+  - controller: {fileID: 9100000, guid: d71866e0f62caad4e80c473a1c176f5a, type: 2}
+    type: 1
+    animDatas:
+    - clipName: PlayerShortGun_Idle
+      clipDatas:
+      - sprite: {fileID: -1719464154631383467, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.545, y: 0.66}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -1719464154631383467, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+    - clipName: PlayerShortGun_Walk
+      clipDatas:
+      - sprite: {fileID: 3530227534762205826, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.51, y: 0.66}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 937092579461856459, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.51, y: 0.6}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -945315892096297722, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.527, y: 0.61}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 7006141848224189663, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.525, y: 0.62}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 4064411683027165209, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.518, y: 0.63}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 6140643932376875666, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.515, y: 0.63}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 8167385451562394751, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.522, y: 0.61}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 935652967330318402, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.527, y: 0.61}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 7756626762081095632, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.527, y: 0.62}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -3625772520411325460, guid: 8808942fedd981a4ea017bc04d29f643, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.53, y: 0.64}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerShortGun_Attack
+      clipDatas:
+      - sprite: {fileID: -1719464154631383467, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.545, y: 0.66}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 8151942139848237213, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.555, y: 0.64}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -1753100401615747684, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.555, y: 0.657}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 5939455675611007993, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.545, y: 0.69}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 6104988095824932893, guid: 431035492f483594b8f403b103e52984, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.545, y: 0.66}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerShortGun_Jump
+      clipDatas:
+      - sprite: {fileID: 1671379921696354193, guid: 990ac50c081ff8242bf20f6d1e4ed370, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.498, y: 0.595}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -7893700141813199321, guid: 990ac50c081ff8242bf20f6d1e4ed370, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.485, y: 0.66}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerShortGun_JumpAttack
+      clipDatas:
+      - sprite: {fileID: -8270973435923998197, guid: 0e368306b2dfee749becd439d68e4031, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.505, y: 0.67}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -9075134923837043252, guid: 0e368306b2dfee749becd439d68e4031, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.505, y: 0.67}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 250207365302029326, guid: 0e368306b2dfee749becd439d68e4031, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.508, y: 0.68}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -6254967237243167205, guid: 0e368306b2dfee749becd439d68e4031, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.508, y: 0.665}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 4420893109343483270, guid: 0e368306b2dfee749becd439d68e4031, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.508, y: 0.67}
+        weaponAngle: 0
+        orderInLayer: 1
+  - controller: {fileID: 9100000, guid: 1405b6851c7d5404b9b6094d3e9cb174, type: 2}
+    type: 2
+    animDatas:
+    - clipName: PlayerLongGun_Idle
+      clipDatas:
+      - sprite: {fileID: 815489992627505547, guid: bbdee4bc3e95f1c4480a9dc35abc4aec, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.37, y: 0.52}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerLongGun_Walk
+      clipDatas:
+      - sprite: {fileID: 2574418437862729602, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.28, y: 0.43}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 6102615543957013510, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.28, y: 0.43}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -436018396000728414, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.27, y: 0.45}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -9152474906281572529, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.45}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -328118399441696804, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.45}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 665557100357575193, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.27, y: 0.45}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -6073087505023191411, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.25, y: 0.46}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 8392886085950316392, guid: f5ea167d4a62b8b42908e1908796d5af, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.46}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerLongGun_Jump
+      clipDatas:
+      - sprite: {fileID: 3526593137546199506, guid: 8f1b1340ac189be47b3fc6456b81c6f5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.3, y: 0.41}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -9145505765229668730, guid: 8f1b1340ac189be47b3fc6456b81c6f5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.27, y: 0.465}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerLongGun_Attack
+      clipDatas:
+      - sprite: {fileID: 8651612609561595443, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.25, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -6405112395283885055, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.27, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -3149611796829231979, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 1366371544930150843, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 6236110119638981961, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 4947215169345496266, guid: 8a696809ecd6e6d4a909791e40402a79, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+    - clipName: PlayerLongGun_JumpAttack
+      clipDatas:
+      - sprite: {fileID: 4877197450139907116, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -8043802526956001663, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.28, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 1987704806560125300, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.26, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -6245668468240578905, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.25, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: 1262856851471332881, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.28, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+      - sprite: {fileID: -1973952852815805093, guid: dbd268727a8be4542a1c89031fe7f7d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.27, y: 0.47}
+        weaponAngle: 0
+        orderInLayer: 1
+  - controller: {fileID: 9100000, guid: 8fe22590126cc62428c4d6061e76fa0b, type: 2}
+    type: 3
+    animDatas:
+    - clipName: PlayerAxe_Idle
+      clipDatas:
+      - sprite: {fileID: 23065308024195510, guid: 6c5e0b2b0ec715047a4e08d610ff515e, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+    - clipName: PlayerAxe_Walk
+      clipDatas:
+      - sprite: {fileID: -7710645827696396925, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: 2215060982962553279, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -8972423339409295061, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -7837258050031397670, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: 8456872283803542269, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -3140982750284185998, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -7775130788084095210, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -5527597811461401152, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -3526857712102682389, guid: 6ca7af0faa53513498aa101ec1e1b58a, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.27}
+        weaponAngle: -66.91
+        orderInLayer: 1
+    - clipName: PlayerAxe_Jump
+      clipDatas:
+      - sprite: {fileID: -7274501656898691147, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.22}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -3188814982970708360, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0.28}
+        weaponAngle: -66.91
+        orderInLayer: 1
+      - sprite: {fileID: -3494496050253549965, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -7274501656898691147, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -3188814982970708360, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 2710990218584576287, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: 2641047049189205128, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+      - sprite: {fileID: -8691291206825931110, guid: 7eb2deb280e221b438d4a4403286c042, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0, y: 0}
+        weaponAngle: 0
+        orderInLayer: 0
+    - clipName: PlayerAxe_Attack
+      clipDatas:
+      - sprite: {fileID: 1198846272099743005, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.27, y: 0.16}
+        weaponAngle: 105.21
+        orderInLayer: 1
+      - sprite: {fileID: 2993450460112562399, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.51, y: 0.73}
+        weaponAngle: 113.86
+        orderInLayer: 1
+      - sprite: {fileID: 3783066929399249303, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.51, y: 0.78}
+        weaponAngle: 113.86
+        orderInLayer: 1
+      - sprite: {fileID: 3973994862511740906, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.51, y: 0.82}
+        weaponAngle: 113.86
+        orderInLayer: 1
+      - sprite: {fileID: 5177532362329483438, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.66, y: -0.23}
+        weaponAngle: -111.28
+        orderInLayer: 1
+      - sprite: {fileID: 7790157742317917391, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.66, y: -0.23}
+        weaponAngle: -111.28
+        orderInLayer: 1
+      - sprite: {fileID: -826867045064402505, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.66, y: -0.23}
+        weaponAngle: -111.28
+        orderInLayer: 1
+      - sprite: {fileID: 8309841122464232581, guid: ecb2235a292910646be093a462ba2ff1, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.27, y: 0.04}
+        weaponAngle: 105.21
+        orderInLayer: 1
+  - controller: {fileID: 9100000, guid: be89878a6fda72c41a6cd57721f8a983, type: 2}
+    type: 4
+    animDatas:
+    - clipName: PlayerBat_Idle
+      clipDatas:
+      - sprite: {fileID: 21300000, guid: 68c7aafd9be4b6046886f2e08ec7e726, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.3}
+        weaponAngle: 131.21
+        orderInLayer: 0
+    - clipName: PlayerBat_Walk
+      clipDatas:
+      - sprite: {fileID: 1162338056573618507, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -2711330654217186217, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -5900713653831143954, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: 2143644586367270814, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -8521631700636013750, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -1595937766588119988, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -4618504533045382998, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: 526597589517646496, guid: e8d79d020f0ea634189b2ad4e5b315d7, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+    - clipName: PlayerBat_Jump
+      clipDatas:
+      - sprite: {fileID: -3224378658878550404, guid: de9e9ba19e91abf49ac9512b4127530b, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.61, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: 2324363090766834551, guid: de9e9ba19e91abf49ac9512b4127530b, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.61, y: -0.25}
+        weaponAngle: 131.21
+        orderInLayer: 0
+    - clipName: PlayerBat_Attack
+      clipDatas:
+      - sprite: {fileID: -6512890024848505129, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.16}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: 8756719746970079948, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.16}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -1831655861600372802, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.74, y: -0.16}
+        weaponAngle: 125.23
+        orderInLayer: 0
+      - sprite: {fileID: 4926828233676780486, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.79, y: 0}
+        weaponAngle: 115.77
+        orderInLayer: 0
+      - sprite: {fileID: -3560080533711051505, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.8, y: 0.56}
+        weaponAngle: 105.47
+        orderInLayer: 0
+      - sprite: {fileID: -500556649015926931, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.83, y: -0.42}
+        weaponAngle: -111.9
+        orderInLayer: 0
+      - sprite: {fileID: 5364642793420296732, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.83, y: -0.48}
+        weaponAngle: -111.9
+        orderInLayer: 0
+      - sprite: {fileID: -2547626590849372873, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.83, y: -0.48}
+        weaponAngle: -111.9
+        orderInLayer: 0
+      - sprite: {fileID: -587772124131733970, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.69, y: -0.35}
+        weaponAngle: -111.9
+        orderInLayer: 0
+      - sprite: {fileID: -1897752353365424019, guid: 4d864d90a094b834a92e6032fb53d1e5, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.52, y: -0.22}
+        weaponAngle: 131.21
+        orderInLayer: 0
+    - clipName: PlayerBat_JumpAttack
+      clipDatas:
+      - sprite: {fileID: 1474431880833938917, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.16}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: -1928200691270980466, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.64, y: -0.16}
+        weaponAngle: 131.21
+        orderInLayer: 0
+      - sprite: {fileID: 162248749548242206, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.73, y: -0.01}
+        weaponAngle: 122.46
+        orderInLayer: 0
+      - sprite: {fileID: -3619451762275344361, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: -0.83, y: 0.57}
+        weaponAngle: 104.09
+        orderInLayer: 0
+      - sprite: {fileID: 1975468026882094814, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.67, y: -0.15}
+        weaponAngle: -107.32
+        orderInLayer: 0
+      - sprite: {fileID: 269322485254277581, guid: 5492a77c3cec49c40919b8563604b2ef, type: 3}
+        clipName: 
+        index: 0
+        weaponOffset: {x: 0.67, y: -0.15}
+        weaponAngle: -107.32
+        orderInLayer: 0
+  animType: 0
+--- !u!114 &3594533136241919790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48338533a16e1f04bb7694fa89a6e76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!251 &2460522995409344328
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3594533136241919777}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 80
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 360
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1

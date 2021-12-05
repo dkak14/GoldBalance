@@ -262,8 +262,8 @@ MonoBehaviour:
     attackSpeed: 1
     bullet: 0
     type: 3
-  offset: {x: 0, y: 0}
-  attackSize: {x: 0.29, y: 0.87}
+  offset: {x: 0.75, y: 0}
+  attackSize: {x: 1.5, y: 2.58}
 --- !u!1 &3773547966079856468
 GameObject:
   m_ObjectHideFlags: 0

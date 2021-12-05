@@ -8,13 +8,7 @@ public class NPC : UnitControllerBase
     public string InteractionEventID;
     public event Action InteractionEvent;
 
-    protected override void Start() {
-        base.Start();
-        EventManager.Instance.TriggerEventMessage(InteractionEventID);
-    }
     public void Interaction() {
-        if(InteractionEvent != null) {
-            EventManager.Instance.TriggerEventMessage(InteractionEventID);
-        }
+        EventManager.Instance.TriggerEventMessage(InteractionEventID);
     }
 }

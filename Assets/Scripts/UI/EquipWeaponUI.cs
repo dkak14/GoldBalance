@@ -8,6 +8,7 @@ public class EquipWeaponUI : MonoBehaviour
 {
     [SerializeField] Image backGround;
     [SerializeField] Image weaponImage;
+    [SerializeField] public Image underBox;
     [SerializeField] public TextMeshProUGUI cornerText;
     PickUpObject pickupObject;
     bool isSelect;
@@ -24,10 +25,11 @@ public class EquipWeaponUI : MonoBehaviour
             weaponImage.color = new Color(1, 1, 1, 1);
             pickupObject = weapon;
             cornerText.text = "";
-
+            underBox.gameObject.SetActive(false);
             pickupObject.DisplayUI(this);
         }
         else {
+            underBox.gameObject.SetActive(false);
             cornerText.text = "";
             pickupObject = null;
             weaponImage.color = new Color(1, 1, 1, 0);

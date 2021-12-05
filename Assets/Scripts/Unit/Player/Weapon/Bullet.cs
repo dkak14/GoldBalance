@@ -6,14 +6,16 @@ public class Bullet : MonoBehaviour
 {
     Rigidbody2D rigidbody2d;
     [SerializeField] string collisionUnit;
-    int damage;
+    UnitControllerBase attacker;
+    Weapon weapon;
     float speed;
     private void Awake() {
         TryGetComponent(out rigidbody2d);
         Destroy(gameObject, 10);
     }
-    public void BulletSetting(int damage, float speed,Vector2 dir) {
-        this.damage = damage;
+    public void BulletSetting(UnitControllerBase attacker, Weapon weapon, float speed, Vector2 dir) {
+        this.attacker = attacker;
+        this.weapon = weapon;
         this.speed = speed;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -23,7 +25,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
     protected virtual void CollisionUnit(UnitControllerBase unit) {
-        unit.Damaged(damage);
+        unit.Damaged(weapon.weaponData.damage, attacker, weapon.weaponData.type);
         Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision) {

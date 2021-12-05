@@ -113,7 +113,7 @@ public class PlayerPickUpController : MonoBehaviour, IInitialization
         playerWeapon.SelectWeapon(selectIndex);
     }
     void PickUpObjectAction(InputAction.CallbackContext context) {
-        if (playerWeapon.selectWeapon != null) {
+        if (playerWeapon.selectWeapon != null && !playerController.IsActiveState(UnitAnimState.Cinematic)) {
             if (playerWeapon.selectWeapon.Action(mouseDir)) {
                 //if (!animator.GetBool("isMove") || animator.GetBool("isJump"))
                 //    animator.SetTrigger("Attack");
@@ -161,7 +161,6 @@ public class PlayerPickUpController : MonoBehaviour, IInitialization
         playerInputController.GetInputAction("2").inputAction.started += (context) => { if (!playerController.IsActiveState(UnitAnimState.Die)) playerWeapon.SelectWeapon(1); };
         playerInputController.GetInputAction("F").inputAction.started += GetItem;
         playerInputController.GetInputAction("Q").inputAction.started += ThrowItem;
-        playerInputController.GetInputAction("Q").inputAction.started += (context) => { playerController.Damaged(100); };
         playerWeapon = new PlayerWeapon(this,animController, 2);
         playerWeapon.changeSelectWeapon += ChangeSelectWeapon;
         puoLayerMask = 1 << LayerMask.NameToLayer("PickUpObject");
