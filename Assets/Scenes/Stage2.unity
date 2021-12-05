@@ -5100,6 +5100,7 @@ GameObject:
   - component: {fileID: 794050723}
   - component: {fileID: 794050722}
   - component: {fileID: 794050721}
+  - component: {fileID: 794050724}
   m_Layer: 4
   m_Name: Portal
   m_TagString: Untagged
@@ -5162,6 +5163,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &794050724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794050720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfba9332d7fed0640afbefb886ef3f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventObjects: []
+  Condition: []
+  NumberOfOperator: 0
+  EndType: 0
+  ActionLogicalOperators: 0
+  Sequence:
+  - {fileID: 1568004305}
+  instanceID: -3470
 --- !u!1001 &821293202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5913,7 +5934,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1099852994}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 5.9
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -6153,7 +6174,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -113029,7 +113050,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442595222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.96, y: 4.1, z: 0}
+  m_LocalPosition: {x: -3.19, y: 1.21, z: 0}
   m_LocalScale: {x: 2.0981, y: 2.0981, z: 2.0981}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113645,6 +113666,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8807929822625114424, guid: 5ee39f0781981f942bcb24463a7b7b95, type: 3}
   m_PrefabInstance: {fileID: 1557718475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568004305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d861d481d36b3c409ffbe89f4376c83, type: 3}
+  m_Name: AcSetAnimatorParam
+  m_EditorClassIdentifier: 
+  paramType: 0
+  animator: {fileID: 0}
+  paramName: 
+  intParam: 0
+  floatParam: 0
+  boolParam: 0
 --- !u!1001 &1570081808
 PrefabInstance:
   m_ObjectHideFlags: 0
