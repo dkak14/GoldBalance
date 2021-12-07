@@ -26,7 +26,6 @@ public class BossController : EnemyController
     [SerializeField] RuntimeAnimatorController phase2Controller;
     [SerializeField] float phase2AttackRange;
     [SerializeField] float attackCul2;
-    [SerializeField] float attack2Delay;
     [SerializeField] Vector2 attackOffset;
     [SerializeField] Vector2 attackSize;
     [SerializeField] SpriteRenderer deadBody;
@@ -42,6 +41,7 @@ public class BossController : EnemyController
     Coroutine phase1AttackRoutine;
     protected override void Awake() {
         base.Awake();
+        hpValueChange += PhaseTwoCondition;
 
         int bulletLineCount = Mathf.Max(attackCount2, attackCount1);
 
@@ -108,7 +108,7 @@ public class BossController : EnemyController
     IEnumerator C_PhaseTwoAttack() {
         moveController.isMove = false;
 
-        yield return new WaitForSeconds(attack2Delay);
+        yield return new WaitForSeconds(1);
         animator.SetTrigger("Attack");
         Vector2 point = spriteRenderer.flipX ? new Vector2(-attackOffset.x, attackOffset.y) : attackOffset;
         Collider2D player = Physics2D.OverlapBox((Vector2)transform.position + point, attackSize, 0, 1 << LayerMask.NameToLayer("Player"));
@@ -158,7 +158,7 @@ public class BossController : EnemyController
         animator.Play("Boss_Phase1_Attack", 0, 0);
         animator.speed = 0;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         animator.speed = 1;
         WaitForSeconds wait = new WaitForSeconds(delay);
         for(int i = 0; i < count; i++) {
@@ -242,7 +242,7 @@ public class BossController : EnemyController
         SetActiveState(UnitAnimState.Cinematic, true);
         moveController.isMove = false;
         deadBody.flipX = spriteRenderer.flipX;
-        deadBody.transform.position = transform.position - Vector3.right * 0.085f;
+        deadBody.transform.position = transform.position;
         EventManager.Instance.TriggerEventMessage("BossDie");
     }
     protected override void OnDrawGizmos() {

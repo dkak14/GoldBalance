@@ -17,54 +17,53 @@ MonoBehaviour:
     characterID: 1
     imageID: 101
     remainingTime: 0
-    dialog: "\uBB50\uC2DC\uAE30 \uBB50\uC2DC\uAE30 \uB098\uC05C\uB118\uC544"
+    dialog: "\uD760... (\uC8FC\uC778\uC7A5\uC774 \uC790\uB9AC\uB97C \uBE44\uC6E0\uAD70)"
+    typingStartEvent: 
+    typingEndEvent: 
   - id: 10002
-    characterID: 3
-    imageID: 201
+    characterID: 2
+    imageID: -1
     remainingTime: 0
-    dialog: "\uBB50\uC694"
+    dialog: "\uAD6C\uB354\uAE30... \uB9CE\uB2E4... \uB0C4\uC0C8 \uB610\uD55C... \uB9CE\uB2E4."
+    typingStartEvent: 
+    typingEndEvent: 
   - id: 10003
     characterID: 1
-    imageID: 301
+    imageID: 101
     remainingTime: 0
-    dialog: 
-  - id: 20001
-    characterID: 4
-    imageID: 401
-    remainingTime: 0
-    dialog: "\uC369\uC740 \uB0B4\uAC00 \uB09C\uB2E4"
-  - id: 20002
-    characterID: 5
+    dialog: "\uB0B4\uAC00 \uCE58\uC6B0\uC9C0."
+    typingStartEvent: 
+    typingEndEvent: 
+  - id: 10004
+    characterID: 2
     imageID: -1
     remainingTime: 0
-    dialog: 
-  - id: 20002
-    characterID: 6
+    dialog: "\uBE68\uB300 \uB9CE\uC740 \uBAA8\uAE30... \uC544\uC774\uB4E4\uC744...
+      \uBE64\uB2E4."
+    typingStartEvent: 
+    typingEndEvent: 
+  - id: 10005
+    characterID: 1
     imageID: -1
     remainingTime: 0
-    dialog: "1965\uB144 XX\uC2DC \uC2AC\uB7FC\uAC00 \uC9C0\uC6D0"
-  - id: 20002
-    characterID: 6
+    dialog: "\uB0C4\uC0C8\uB294... \uD655\uC2E4\uD558\uAC8C \uBCF4\uAD00\uD574\uC8FC\uB294
+      \uAC74\uAC00?"
+    typingStartEvent: 
+    typingEndEvent: 
+  - id: 10006
+    characterID: 2
     imageID: -1
     remainingTime: 0
-    dialog: "1977\uB144 \uBC84\uB824\uC9C4 \uC2AC\uB7FC\uAC00 \uAD6C\uC6D0\uC740?"
-  - id: 20002
-    characterID: 6
-    imageID: -1
-    remainingTime: 0
-    dialog: ??
-  - id: 20002
-    characterID: 6
-    imageID: -1
-    remainingTime: 0
-    dialog: ??
+    dialog: "\uC54C\uC558\uB2E4."
+    typingStartEvent: 
+    typingEndEvent: 
   characterDatas:
   - id: 1
     name: "\uC8FC\uC778\uACF5"
   - id: 2
-    name: "\uC5F0\uC1C4\uC0B4\uC778\uB9C8"
+    name: "\uC804\uD654\uB118\uC5B4 \uB204\uAD70\uAC00"
   - id: 3
-    name: "\uBC14\uD150\uB354"
+    name: "\uC5F0\uC1C4\uC0B4\uC778\uB9C8"
   - id: 4
     name: "\uC2DC\uCCB4 \uB354\uBBF8"
   - id: 5

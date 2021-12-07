@@ -11,7 +11,4 @@ public class NPC : UnitControllerBase
     public void Interaction() {
         EventManager.Instance.TriggerEventMessage(InteractionEventID);
     }
-    protected override void die() {
-        base.die();
-    }
 }

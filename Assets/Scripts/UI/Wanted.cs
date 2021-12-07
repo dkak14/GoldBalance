@@ -6,10 +6,14 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class Wanted : MonoBehaviour
 {
+    [SerializeField] UIInputController inputController;
     [SerializeField] bool anykeyDisable;
-    [SerializeField] string diableEventID;
+    public TextMeshProUGUI text;
     public int textID;
     bool frame;
+    public void Start() {
+        text.text = TalkManager.Instance.GetDialogData(textID).dialog;      
+    }
     private void Update() {
         if (anykeyDisable && Keyboard.current.anyKey.wasPressedThisFrame && frame) {
             gameObject.SetActive(false);
@@ -30,9 +34,6 @@ public class Wanted : MonoBehaviour
 
     private void OnDisable() {
         EventManager.Instance.SetActiveCutScene(false);
-        if(diableEventID != "") {
-            EventManager.Instance.TriggerEventMessage(diableEventID);
-        }
         //UnitControllerBase unit = UnitManager.Instance.GetUnit("Player");
         //UnitMoveControllerBase playerMove;
         //if (unit && unit.TryGetComponent(out playerMove)){

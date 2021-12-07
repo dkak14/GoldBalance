@@ -491,10 +491,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9183054195659482651, guid: 9ef5162a848b3bd41b3c190e45aedf7d, type: 3}
-      propertyPath: anykeyDisable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9183054195659482651, guid: 9ef5162a848b3bd41b3c190e45aedf7d, type: 3}
       propertyPath: inputController
       value: 
       objectReference: {fileID: 3254365552239380618}
