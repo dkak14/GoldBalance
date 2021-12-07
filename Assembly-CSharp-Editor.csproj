@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineSetNoiseEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\Editor\AcDelayEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineSetLensEditor.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcSoundEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerActionEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\DOTween\Editor\AcDoScaleEditor.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCinePriorityEditor.cs" />
@@ -96,7 +97,7 @@
     <Compile Include="Assets\Scripts\Trigger\Editor\TriggerUtility.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\Editor\AcCineSetSoftZoneEditor.cs" />
     <Compile Include="Assets\Scripts\Editor\EditorWaitForSeconds.cs" />
-    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcSoundEditor.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\Editor\AcDebugUnitDieEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

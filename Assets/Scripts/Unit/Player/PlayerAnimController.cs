@@ -47,6 +47,7 @@ public class PlayerAnimController : MonoBehaviour
     public PlayerAnimClipSpriteData GetCurrentClipData() {
         AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
         if (animControllerDataDic.ContainsKey(animType)) {
+            if(clipInfo.Length > 0)
             return animControllerDataDic[animType].GetClipDate(clipInfo[0].clip.name, spriteRenderer);
         }
         return null;

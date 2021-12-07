@@ -204,7 +204,6 @@ MonoBehaviour:
   talkBackground: {fileID: 4688149362105771949}
   portrait: {fileID: 4688149363111124429}
   textTMP: {fileID: 4688149363782968279}
-  nameTMP: {fileID: 0}
   isTyping: 0
 --- !u!1 &4688149363782968277
 GameObject:
@@ -271,7 +270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD14D\uC2A4\uD2B8 \uD14D\uC2A4\uD2B8\n"
+  m_text: "\uD14D\uC2A4\uD2B8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7ce4b23f3e7050a46b58db54819adfb7, type: 2}
   m_sharedMaterial: {fileID: 7462027591075425783, guid: 7ce4b23f3e7050a46b58db54819adfb7, type: 2}

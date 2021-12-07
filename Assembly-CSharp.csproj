@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\AcCinePriority.cs" />
     <Compile Include="Assets\Scripts\Unit\Player\Weapon\Bat.cs" />
     <Compile Include="Assets\Scripts\UI\SoundSlider.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcSound.cs" />
     <Compile Include="Assets\Scripts\UI\StagePage.cs" />
     <Compile Include="Assets\Scripts\Trigger\Cinemachine\AcCineSetSoftZone.cs" />
     <Compile Include="Assets\Scripts\Trigger\NormalTrigger\AcDestroy.cs" />
@@ -152,7 +153,8 @@
     <Compile Include="Assets\Scripts\Unit\UnitControllerBase.cs" />
     <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcDebugUnitMove.cs" />
     <Compile Include="Assets\Scripts\Manager\EffectManager.cs" />
-    <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcSound.cs" />
+    <Compile Include="Assets\Scripts\BossObject.cs" />
+    <Compile Include="Assets\Scripts\Trigger\GoldBalance\AcDebugUnitDie.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
