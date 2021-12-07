@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1ee9dbb1e51a74cae69d686a1f0f3f, type: 3}
+  m_Name: DialogData
+  m_EditorClassIdentifier: 
+  dialogData:
+  - id: 10001
+    characterID: 1
+    imageID: 101
+    remainingTime: 0
+    dialog: "\uBB50\uC2DC\uAE30 \uBB50\uC2DC\uAE30 \uB098\uC05C\uB118\uC544"
+  - id: 10002
+    characterID: 3
+    imageID: 201
+    remainingTime: 0
+    dialog: "\uBB50\uC694"
+  - id: 10003
+    characterID: 1
+    imageID: 301
+    remainingTime: 0
+    dialog: 
+  - id: 20001
+    characterID: 4
+    imageID: 401
+    remainingTime: 0
+    dialog: "\uC369\uC740 \uB0B4\uAC00 \uB09C\uB2E4"
+  - id: 20002
+    characterID: 5
+    imageID: -1
+    remainingTime: 0
+    dialog: 
+  - id: 20002
+    characterID: 6
+    imageID: -1
+    remainingTime: 0
+    dialog: "1965\uB144 XX\uC2DC \uC2AC\uB7FC\uAC00 \uC9C0\uC6D0"
+  - id: 20002
+    characterID: 6
+    imageID: -1
+    remainingTime: 0
+    dialog: "1977\uB144 \uBC84\uB824\uC9C4 \uC2AC\uB7FC\uAC00 \uAD6C\uC6D0\uC740?"
+  - id: 20002
+    characterID: 6
+    imageID: -1
+    remainingTime: 0
+    dialog: ??
+  - id: 20002
+    characterID: 6
+    imageID: -1
+    remainingTime: 0
+    dialog: ??
+  characterDatas:
+  - id: 1
+    name: "\uC8FC\uC778\uACF5"
+  - id: 2
+    name: "\uC5F0\uC1C4\uC0B4\uC778\uB9C8"
+  - id: 3
+    name: "\uBC14\uD150\uB354"
+  - id: 4
+    name: "\uC2DC\uCCB4 \uB354\uBBF8"
+  - id: 5
+    name: "\uC804\uB2E8\uC9C0"
+  - id: 6
+    name: "\uC2E0\uBB38\uC9C0"
