@@ -32,30 +32,7 @@ public class ZombieController : EnemyController
             animator.SetBool("isMove", false);
         }
     }
-    protected override void die() {
-        transform.gameObject.layer = LayerMask.NameToLayer("DieUnit");
-        Animator animator = GetComponent<Animator>();
-        animator.SetBool("isDie", true);
-        StartCoroutine(C_DieEffect());
-    }
-    IEnumerator C_DieEffect() {
-        yield return new WaitForSeconds(1.5f);
-        float waitCycle = 0.05f;
-        WaitForSeconds wait = new WaitForSeconds(waitCycle);
-        float alpha = 0;
-        float lastTime = 1f;
-        while (true) {
-            spriteRenderer.color = new Color(1, 1, 1, alpha);
-            alpha = alpha == 0 ? 1 : 0;
-            yield return wait;
-            lastTime -= waitCycle;
-            if(lastTime <= 0) {
-                break;
-            }
-        }
-        transform.DOKill();
-        Destroy(gameObject);
-    }
+
     public override void Attack() {
         Collider2D[] hits = Physics2D.OverlapBoxAll((Vector2)transform.position + attackOffset, attackSize, 0, playerLayerMask);
         for (int i = 0; i < hits.Length; i++) {

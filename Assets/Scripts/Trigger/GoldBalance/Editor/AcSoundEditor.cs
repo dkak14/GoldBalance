@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using Triggers;
-[CustomEditor(typeof(AcAddTransform), true), CanEditMultipleObjects]
+[CustomEditor(typeof(AcSound), true), CanEditMultipleObjects]
 
 public class AcSoundEditor : TriggerActionEditor {
     SerializedProperty type;

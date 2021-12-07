@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7383355616953833044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.590083, y: 0.6275714, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -251,7 +251,7 @@ MonoBehaviour:
     name: "\uBC1C\uD130PPK"
     ID: 11011
     damage: 50
-    reloading: 0.5
+    reloading: 1
     attackSpeed: 0.5
     bullet: 5
     type: 1
