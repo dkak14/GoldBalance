@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using DG.Tweening;
 public enum UnitAnimState {
     Idle = 1, Cinematic = 2, Die = 3
 }
@@ -61,7 +60,7 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
     IEnumerator C_CheckPlatform() {
         WaitForFixedUpdate fixedUpdate = new WaitForFixedUpdate();
         Vector2 boxSize = new Vector2(collider2d.bounds.size.x * 0.9f, 0.1f);
-        int layerMask = (1 << LayerMask.NameToLayer("Platform")) + (1 << LayerMask.NameToLayer("BuildingPlatform"));
+        int layerMask = 1 << LayerMask.NameToLayer("Platform");
         while (true) {
             Vector2 center = collider2d.bounds.center - Vector3.up * (collider2d.bounds.size.y * 0.5f);
             onPlatformHitCollider = Physics2D.OverlapBox(center, boxSize, 0, layerMask);
@@ -103,28 +102,6 @@ public class UnitControllerBase : MonoBehaviour, IInitialization {
         die();
     }
     protected virtual void die() {
-        transform.gameObject.layer = LayerMask.NameToLayer("DieUnit");
-        Animator animator;
-        if(TryGetComponent(out animator))
-        animator.SetBool("isDie", true);
-        StartCoroutine(C_DieEffect());
-    }
-    IEnumerator C_DieEffect() {
-        yield return new WaitForSeconds(1.5f);
-        float waitCycle = 0.05f;
-        WaitForSeconds wait = new WaitForSeconds(waitCycle);
-        float alpha = 0;
-        float lastTime = 1f;
-        while (true) {
-            spriteRenderer.color = new Color(1, 1, 1, alpha);
-            alpha = alpha == 0 ? 1 : 0;
-            yield return wait;
-            lastTime -= waitCycle;
-            if (lastTime <= 0) {
-                break;
-            }
-        }
-        transform.DOKill();
         Destroy(gameObject);
     }
     public virtual void Initialization() {

@@ -42,6 +42,7 @@ public class BossController : EnemyController
     Coroutine phase1AttackRoutine;
     protected override void Awake() {
         base.Awake();
+        hpValueChange += PhaseTwoCondition;
 
         int bulletLineCount = Mathf.Max(attackCount2, attackCount1);
 
@@ -242,7 +243,7 @@ public class BossController : EnemyController
         SetActiveState(UnitAnimState.Cinematic, true);
         moveController.isMove = false;
         deadBody.flipX = spriteRenderer.flipX;
-        deadBody.transform.position = transform.position - Vector3.right * 0.085f;
+        deadBody.transform.position = transform.position;
         EventManager.Instance.TriggerEventMessage("BossDie");
     }
     protected override void OnDrawGizmos() {

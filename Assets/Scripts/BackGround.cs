@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackGround : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] List<SpriteRenderer> backGround;
     [SerializeField] float speed;
     [SerializeField] float boundX;
     [SerializeField] float startX;
@@ -14,16 +14,11 @@ public class BackGround : MonoBehaviour
     Camera mainCamera;
     void Start()
     {
-        BackGround bg;
-        if (!spriteRenderer.TryGetComponent(out bg)) {
-            boundX = spriteRenderer.bounds.size.x;
-            startX = transform.position.x;
-            GameObject back1 = Instantiate(spriteRenderer.gameObject, transform.position + Vector3.right * boundX, Quaternion.identity);
-            GameObject back2 = Instantiate(spriteRenderer.gameObject, transform.position - Vector3.right * boundX, Quaternion.identity);
-            back1.transform.parent = transform;
-            back2.transform.parent = transform;
-            mainCamera = Camera.main;
-        }
+        startX = transform.position.x;
+        boundX = backGround[0].bounds.size.x;
+        backGround[1].transform.position = backGround[0].transform.position + Vector3.right * boundX;
+        backGround[2].transform.position = backGround[0].transform.position - Vector3.right * boundX;
+        mainCamera = Camera.main;
     }
     void Update()
     {       
